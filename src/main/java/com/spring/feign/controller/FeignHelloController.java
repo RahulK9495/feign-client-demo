@@ -15,16 +15,14 @@ public class FeignHelloController {
 
 	@Autowired
 	feignService feignService;
-	
+
 	@GetMapping("/hellofeign")
-	public String helloFeign()
-	{
+	public String helloFeign() {
 		return feignService.gethello();
 	}
-	
+
 	@PostMapping("/createAccount")
-	public Account createAccountC(@RequestBody Account account)
-	{
+	public Account createAccountC(@RequestBody Account account) {
 		return feignService.createAccount(account);
 	}
 }
